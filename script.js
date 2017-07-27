@@ -42,7 +42,11 @@ function addNums(){
     numbers.push (12);
     numbers.push (99);
     numbers.push (101);
+
+    return numbers;
 }
+
+
 
 
 
@@ -64,6 +68,8 @@ let film = {
 4. Add a property "boxoffice" with a value of 269061 to the "film" object. Return "film".
 */
 function addBoxOffice(){
+  film.boxoffice = 269061;
+  return film;
     // Your answer here:
 }
 
@@ -71,15 +77,20 @@ function addBoxOffice(){
 5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
 */
 function addActor(){
+  film.actors.push("Yukiko Shimazaki")
     // Your answer here:
+    return film;
 }
+
 
 /*
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses(){
+  return film.boxoffice - film.budget
     // Your answer here:
 }
+
 
 
 
@@ -97,12 +108,12 @@ let letterVals = [ "v", "x", "r", "f", "p" ];
 
 function interleave(){
     let vals = [];
+    for (let i=0; i<numberVals.length ; i++) {
+      vals[i] = letterVals[i]+numberVals[i]
+    }
     // Your answer here:
+    return vals;
 }
-
-
-
-
 
 
 /*
@@ -114,5 +125,11 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 
 function union(){
     let same = [];
+
+    for (i=0; i<first.length; i++)
+     if (first[i]=== second[i]){
+       same.push(first[i])
+     }
     // Your answer here:
+    return same;
 }
